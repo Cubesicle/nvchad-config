@@ -13,6 +13,17 @@ return {
     end,
   },
 
+  {
+    "tpope/vim-repeat",
+  },
+
+  {
+    "ggandor/leap.nvim",
+    init = function()
+      require('leap').add_default_mappings()
+    end,
+  },
+
   -- {
   -- 	"nvim-treesitter/nvim-treesitter",
   -- 	opts = {

@@ -20,10 +20,15 @@ require("lazy").setup({
     lazy = false,
     branch = "v2.5",
     import = "nvchad.plugins",
+    cond = (function() return not vim.g.vscode end),
   },
 
   { import = "plugins" },
 }, lazy_config)
+
+if vim.g.vscode then
+  return
+end
 
 -- load theme
 dofile(vim.g.base46_cache .. "defaults")
